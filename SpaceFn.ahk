@@ -134,8 +134,8 @@ sendSpaceAny(key) {
 
 
 ; --- その他 ---
-*[:: sendSpaceAny("Volume_Down")
-*]:: sendSpaceAny("Volume_Up")
+*@:: sendSpaceAny("Volume_Down")
+*[:: sendSpaceAny("Volume_Up")
 +*[:: sendSpaceAny("BROWSER_BACK")
 +*]:: sendSpaceAny("BROWSER_FORWARD")
 *Enter:: sendSpaceAny("WheelDown 4")
