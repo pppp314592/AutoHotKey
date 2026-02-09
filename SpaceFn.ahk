@@ -75,6 +75,8 @@ sendSpaceAny(key) {
 *t:: sendSpaceAny("|")
 ;+*q:: sendSpaceAny("$")
 ;+*w:: sendSpaceAny("\")
++*q:: sendSpaceAny("'")
++*w:: sendSpaceAny("`"")
 +*e:: sendSpaceAny("?")
 +*r:: sendSpaceAny("$")
 +*t:: sendSpaceAny("@")
@@ -88,6 +90,7 @@ sendSpaceAny(key) {
 *i:: sendSpaceAny("Up")
 *o:: sendSpaceAny("End")
 *p:: sendSpaceAny("Backspace")
++*y:: sendSpaceAny("sc079")
 ; --- ASDFG ---
 *a:: sendSpaceAny("+")
 *s:: sendSpaceAny("-")
@@ -178,6 +181,29 @@ sendSpaceAny(key) {
 <!<^<#*[:: sendSpaceAny("(")
 <!<^<#*]:: sendSpaceAny(")")
 <!<^<#*ESC:: sendSpaceAny("NumLock")
+
+
+; F13:: {
+;     ; Run "I:\SteamLibrary\steamapps\common\Street Fighter 6\StreetFighter6.exe"
+;     Run "notepad.exe"
+; }
+; ; Numpad6:: {
+; ;     Run "notepad.exe"
+; ; }
+; NumpadRight:: {
+;     Run "notepad.exe"
+; }
+
+; NumpadIns:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Ultra Street Fighter IV.url"   ; Shift + テンキー 0 (Insert)
+; NumpadEnd:: Run "I:\SteamLibrary\steamapps\common\CAPCOM FIGHTING COLLECTION 2\CapcomFightingCollection2.exe"   ; Shift + テンキー 1 (End)
+^NumpadDown:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\カプコン ファイティング コレクション2.url"  ; Shift + テンキー 2 (Down)
+; NumpadPgDn:: Run "C:\Path\To\App3.exe"  ; Shift + テンキー 3 (PgDn)
+^NumpadLeft:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Ultra Street Fighter IV.url"  ; Shift + テンキー 4 (Left)
+^NumpadClear:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Street Fighter V.url" ; Shift + テンキー 5 (Clear)
+^NumpadRight:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Street Fighter 6.url" ; Shift + テンキー 6 (Right)
+; NumpadHome:: Run "C:\Path\To\App7.exe"  ; Shift + テンキー 7 (Home)
+; NumpadUp:: Run "C:\Path\To\App8.exe"    ; Shift + テンキー 8 (Up)
+; NumpadPgUp:: Run "C:\Path\To\App9.exe"  ; Shift + テンキー 9 (PgUp)
 
 
 ;#Include MyHotString.ahk
