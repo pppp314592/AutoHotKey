@@ -156,31 +156,33 @@ sendSpaceAny(key) {
 #HotIf !SpaceFnMode
 ; --- NumPad ---
 ; <!<^<#*m:: sendSpaceAny("Numpad0")
-<!<^<#*,:: sendSpaceAny("Numpad0")
-<!<^<#*j:: sendSpaceAny("Numpad1")
-<!<^<#*k:: sendSpaceAny("Numpad2")
-<!<^<#*l:: sendSpaceAny("Numpad3")
-<!<^<#*u:: sendSpaceAny("Numpad4")
-<!<^<#*i:: sendSpaceAny("Numpad5")
-<!<^<#*o:: sendSpaceAny("Numpad6")
-<!<^<#*7:: sendSpaceAny("Numpad7")
-<!<^<#*8:: sendSpaceAny("Numpad8")
-<!<^<#*9:: sendSpaceAny("Numpad9")
-<!<^<#*0:: sendSpaceAny("Numpad0")
-<!<^<#*.:: sendSpaceAny(".")
-;<!<^<#*/:: sendSpaceAny("NumpadDot")
-;<!<^<#*h:: sendSpaceAny("=")
-<!<^<#*;:: sendSpaceAny("NumpadEnter")
-<!<^<#*p:: sendSpaceAny("Backspace")
-;<!<^<#*Tab:: sendSpaceAny("NumpadDel")
-;<!<^<#*c:: sendSpaceAny("NumpadClear")
-<!<^<#*n:: sendSpaceAny("NumpadAdd")
-<!<^<#*m:: sendSpaceAny("NumpadSub")
-<!<^<#*h:: sendSpaceAny("NumpadMult")
-<!<^<#*y:: sendSpaceAny("NumpadDiv")
-<!<^<#*[:: sendSpaceAny("(")
-<!<^<#*]:: sendSpaceAny(")")
-<!<^<#*ESC:: sendSpaceAny("NumLock")
+<!<^<+*Space:: sendSpaceAny("Numpad0")
+<!<^<+*p:: sendSpaceAny("Numpad0")
+<!<^<+*m:: sendSpaceAny("Numpad1")
+<!<^<+*,:: sendSpaceAny("Numpad2")
+<!<^<+*.:: sendSpaceAny("Numpad3")
+<!<^<+*j:: sendSpaceAny("Numpad4")
+<!<^<+*k:: sendSpaceAny("Numpad5")
+<!<^<+*l:: sendSpaceAny("Numpad6")
+<!<^<+*u:: sendSpaceAny("Numpad7")
+<!<^<+*i:: sendSpaceAny("Numpad8")
+<!<^<+*o:: sendSpaceAny("Numpad9")
+<!<^<+*/:: sendSpaceAny("NumpadDot")
+; <!<^<+*p:: sendSpaceAny("Numpad0")
+; <!<^<#*.:: sendSpaceAny(".")
+; ;<!<^<#*/:: sendSpaceAny("NumpadDot")
+; ;<!<^<#*h:: sendSpaceAny("=")
+; <!<^<#*;:: sendSpaceAny("NumpadEnter")
+; <!<^<#*p:: sendSpaceAny("Backspace")
+; ;<!<^<#*Tab:: sendSpaceAny("NumpadDel")
+; ;<!<^<#*c:: sendSpaceAny("NumpadClear")
+; <!<^<#*n:: sendSpaceAny("NumpadAdd")
+; <!<^<#*m:: sendSpaceAny("NumpadSub")
+; <!<^<#*h:: sendSpaceAny("NumpadMult")
+; <!<^<#*y:: sendSpaceAny("NumpadDiv")
+; <!<^<#*[:: sendSpaceAny("(")
+; <!<^<#*]:: sendSpaceAny(")")
+; <!<^<#*ESC:: sendSpaceAny("NumLock")
 
 
 ; F13:: {
@@ -210,3 +212,20 @@ sendSpaceAny(key) {
 ; #Include ForSplashtop.ahk
 ;#Include TestGUI.ahk
 ;#Include SCFn.ahk
+
+
+; --- 左右Altのカスタマイズ (Modifier機能を維持しつつ単押しで変換/無変換) ---
+
+; ; 左Altを「無変換(vk1D)」に
+; ~LAlt up:: {
+;     if (A_PriorKey = "LAlt") {
+;         Send "{vk1D}"
+;     }
+; }
+
+; ; 右Altを「変換(vk1C)」に
+; ~RAlt up:: {
+;     if (A_PriorKey = "RAlt") {
+;         Send "{vk1C}"
+;     }
+; }
