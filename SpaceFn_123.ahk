@@ -45,7 +45,7 @@ sendSpaceAny(key) {
 ;#HotIf SpaceFnMode && !WinActive("ahk_exe notepad.exe") ; SpaceFnモード時のみ有効
 #HotIf SpaceFnMode ; SpaceFnモード時のみ有効
 
-; --- ファンクションキー ---
+; --- 数字キー ---
 *1:: sendSpaceAny("F1")
 *2:: sendSpaceAny("F2")
 *3:: sendSpaceAny("F3")
@@ -72,23 +72,17 @@ sendSpaceAny(key) {
 +*^:: sendSpaceAny("F12")
 
 ; --- QWERT ---
-*q:: sendSpaceAny("F11")
-*w:: sendSpaceAny("F12")
-*e:: sendSpaceAny("!")
-*r:: sendSpaceAny("&")
-*t:: sendSpaceAny("|")
-;+*q:: sendSpaceAny("$")
-;+*w:: sendSpaceAny("\")
-+*q:: sendSpaceAny("'")
+*q:: sendSpaceAny("1")
+*w:: sendSpaceAny("2")
+*e:: sendSpaceAny("3")
+*r:: sendSpaceAny("4")
+*t:: sendSpaceAny("5")
++*q:: sendSpaceAny("!")
 +*w:: sendSpaceAny("`"")
-+*e:: sendSpaceAny("?")
++*e:: sendSpaceAny("#")
 +*r:: sendSpaceAny("$")
-+*t:: sendSpaceAny("@")
++*t:: sendSpaceAny("%")
 ; --- YUIOP ---
-; *y:: {
-;     sendSpaceAny("")
-;     SendInput("^{Space}")
-; }
 *y:: sendSpaceAny("vk1Dsc07B")
 *u:: sendSpaceAny("Home")
 *i:: sendSpaceAny("Up")
@@ -96,16 +90,16 @@ sendSpaceAny(key) {
 *p:: sendSpaceAny("Backspace")
 +*y:: sendSpaceAny("sc079")
 ; --- ASDFG ---
-*a:: sendSpaceAny("+")
-*s:: sendSpaceAny("-")
-*d:: sendSpaceAny("*")
-*f:: sendSpaceAny("/")
-*g:: sendSpaceAny("=")
-+*a:: sendSpaceAny("#")
-+*s:: sendSpaceAny("_")
-+*d:: sendSpaceAny("^")
-+*f:: sendSpaceAny("%")
-+*g:: sendSpaceAny(":")
+*a:: sendSpaceAny("6")
+*s:: sendSpaceAny("7")
+*d:: sendSpaceAny("8")
+*f:: sendSpaceAny("9")
+*g:: sendSpaceAny("0")
++*a:: sendSpaceAny("&")
++*s:: sendSpaceAny("'")
++*d:: sendSpaceAny("(")
++*f:: sendSpaceAny(")")
+;+*g:: sendSpaceAny("")
 ; --- HJKL; ---
 *h:: sendSpaceAny("Delete")
 *j:: sendSpaceAny("Left")
@@ -113,52 +107,49 @@ sendSpaceAny(key) {
 *l:: sendSpaceAny("Right")
 *;:: sendSpaceAny("Enter")
 ; --- ZXCVB ---
-*z:: sendSpaceAny("(")
-*x:: sendSpaceAny(")")
-*c:: sendSpaceAny("[")
-*v:: sendSpaceAny("]")
-*b:: sendSpaceAny(";")
-+*z:: sendSpaceAny("{")
-+*x:: sendSpaceAny("}")
-+*c:: sendSpaceAny("{")
-+*v:: sendSpaceAny("}")
-;+*b:: sendSpaceAny("¥")
+*z:: sendSpaceAny("-")
+*x:: sendSpaceAny("^")
+*c:: sendSpaceAny("\")
+*v:: sendSpaceAny("[")
+*b:: sendSpaceAny("]")
++*z:: sendSpaceAny("=")
++*x:: sendSpaceAny("~")
++*c:: sendSpaceAny("|")
++*v:: sendSpaceAny("{")
++*b:: sendSpaceAny("}")
 ; --- NM,./ ---
-*n:: sendSpaceAny("{")
-*m:: sendSpaceAny("}")
+*n:: sendSpaceAny("vk1Dsc07B")  ;無変換
+*m:: sendSpaceAny("sc079")      ;変換
 *,:: sendSpaceAny("<")
 *.:: sendSpaceAny(">")
 ; *n:: sendSpaceAny("ESC")
 ; *m:: sendSpaceAny("PgUp")
 ; *,:: sendSpaceAny("PgDn")
 ; *.:: sendSpaceAny("Delete")
+; *n:: sendSpaceAny("{")
+; *m:: sendSpaceAny("}")
+; *,:: sendSpaceAny("<")
+; *.:: sendSpaceAny(">")
 */:: sendSpaceAny("\")
-; +*n:: sendSpaceAny("{")
-; +*m:: sendSpaceAny("}")
-; +*,:: sendSpaceAny("<")
-; +*.:: sendSpaceAny(">")
-+*/:: sendSpaceAny("¥")
++*/:: sendSpaceAny("_")
 *ESC:: sendSpaceAny("``")
 *Tab:: sendSpaceAny("'")
 +*ESC:: sendSpaceAny("~")
 +*Tab:: sendSpaceAny("`"")
 
-
 ; --- その他 ---
-*@:: sendSpaceAny("Volume_Down")
-*[:: sendSpaceAny("Volume_Up")
-+*[:: sendSpaceAny("BROWSER_BACK")
-+*]:: sendSpaceAny("BROWSER_FORWARD")
-*Enter:: sendSpaceAny("WheelDown 4")
-*BackSpace:: sendSpaceAny("WheelUp 4")
-*\:: sendSpaceAny("Volume_Mute")
-
-; *':: {
-;     if (!isJIS)
-;         GUI_test() ; layer1.jpg
-;     else
-;         SendInput "{Blind}{'}"
-; }
+*@:: sendSpaceAny("[")
+*sc028:: sendSpaceAny("]")
++*@:: sendSpaceAny("{")
++sc028:: sendSpaceAny("}")
+*[:: sendSpaceAny("Volume_Down")
+*]:: sendSpaceAny("Volume_Up")
+*BackSpace:: sendSpaceAny("Volume_Mute")
+; +*[:: sendSpaceAny("BROWSER_BACK")
+; +*]:: sendSpaceAny("BROWSER_FORWARD")
+; *Enter:: sendSpaceAny("WheelDown 4")
+; *BackSpace:: sendSpaceAny("WheelUp 4")
+; *\:: sendSpaceAny("Volume_Mute")
 
 
 #HotIf !SpaceFnMode
@@ -178,7 +169,7 @@ sendSpaceAny(key) {
 <!<^<+*;:: sendSpaceAny("NumpadEnter")
 <!<^<+*p:: sendSpaceAny("Backspace")
 <!<^<+*s:: Run "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Splashtop Remote\Splashtop for CACHATTO V3.lnk"
-<!<^<+*d:: Run "C:\Users\bab20\OneDrive\Documents\MyCode\bat\display-off.bat"
+<!<^<+*d:: Run "C:\Users\bab20\OneDrive\Documents\AnySource\BAT\display-off.bat"
 <!<^<+*a:: Run "C:\Users\bab20\OneDrive\Documents\add_app\おーとくりっか～_ver_2.00\おーとくりっか～.exe"
 <!<^<+*6:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Street Fighter 6.url"
 ; <!<^<+*p:: sendSpaceAny("Numpad0")
@@ -197,18 +188,6 @@ sendSpaceAny(key) {
 ; <!<^<#*]:: sendSpaceAny(")")
 ; <!<^<#*ESC:: sendSpaceAny("NumLock")
 
-
-; F13:: {
-;     ; Run "I:\SteamLibrary\steamapps\common\Street Fighter 6\StreetFighter6.exe"
-;     Run "notepad.exe"
-; }
-; ; Numpad6:: {
-; ;     Run "notepad.exe"
-; ; }
-; NumpadRight:: {
-;     Run "notepad.exe"
-; }
-
 ; NumpadIns:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\Ultra Street Fighter IV.url"   ; Shift + テンキー 0 (Insert)
 ; NumpadEnd:: Run "I:\SteamLibrary\steamapps\common\CAPCOM FIGHTING COLLECTION 2\CapcomFightingCollection2.exe"   ; Shift + テンキー 1 (End)
 ^NumpadDown:: Run "C:\Users\bab20\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Steam\カプコン ファイティング コレクション2.url"  ; Shift + テンキー 2 (Down)
@@ -219,26 +198,3 @@ sendSpaceAny(key) {
 ; NumpadHome:: Run "C:\Path\To\App7.exe"  ; Shift + テンキー 7 (Home)
 ; NumpadUp:: Run "C:\Path\To\App8.exe"    ; Shift + テンキー 8 (Up)
 ; NumpadPgUp:: Run "C:\Path\To\App9.exe"  ; Shift + テンキー 9 (PgUp)
-
-
-;#Include MyHotString.ahk
-; #Include ForSplashtop.ahk
-;#Include TestGUI.ahk
-;#Include SCFn.ahk
-
-
-; --- 左右Altのカスタマイズ (Modifier機能を維持しつつ単押しで変換/無変換) ---
-
-; ; 左Altを「無変換(vk1D)」に
-; ~LAlt up:: {
-;     if (A_PriorKey = "LAlt") {
-;         Send "{vk1D}"
-;     }
-; }
-
-; ; 右Altを「変換(vk1C)」に
-; ~RAlt up:: {
-;     if (A_PriorKey = "RAlt") {
-;         Send "{vk1C}"
-;     }
-; }
